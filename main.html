@@ -64,14 +64,19 @@
             </article>
         </main>
         <hr style="margin: 0;">
-        <section class="section has-text-centered" style="padding: 0rem 0rem; margin: 0;">
+        <section id="touchMe" class="section has-text-centered" style="padding: 0rem 0rem; margin: 0;">
             <h3 class="is-size-4">Near you</h3>
             <div class="container" style="padding-top: 15px;">
                     <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(3).png" alt="error" style="width: 30%;">
                     <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(2).png" alt="error" style="width: 30%;">
                     <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(4).png" alt="error" style="width: 30%;">
             </div>
-            
+            <div class="notification" id="notif">
+                <button class="delete"></button>
+                <a href="https://www.skybarrooftop.com/carvoeiro/">
+                    <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/WhatsApp%20Image%202021-05-07%20at%2010.37.50.jpeg" alt="error">
+                </a>
+            </div>
         </section>
 
 
@@ -116,13 +121,23 @@
                 readMore.style.display = "none"
                 document.getElementById('more').style.display = "block";
                 document.getElementById('readLess').style.display = "block";
-            })
+            });
 
             document.getElementById("readLess").addEventListener('click', showLess = () => {
                 readMore.style.display = "block"
                 document.getElementById('more').style.display = "none";
                 document.getElementById('readLess').style.display = "none";
-            })
+            });
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+            (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+                const $notification = $delete.parentNode;
+                $delete.addEventListener('click', () => {
+                    $notification.parentNode.removeChild($notification);
+                });
+            });
+        });
         </script>
 </body>
 </html>
