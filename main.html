@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <header>
+            <nav class="navbar has-shadow">
+                <div class="navbar-brand">
+                    <a class="navbar-item">
+                        <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(1).png" alt="logo-lisbon" style="max-height: 100px;">
+                    </a>
+    
+                    <a class="navbar-burger" id="burger" style="height: 7rem; width: 7.25rem;">
+                        <span style="width: 20px; height: 1.5px;"></span>
+                        <span style="width: 20px; height: 1.5px;"></span>
+                        <span style="width: 20px; height: 1.5px;"></span>
+                    </a>
+                </div>
+    
+                <div class="navbar-menu" id="navbar-links">
+                    <div class="navbar-end">
+                        <a class="navbar-item">Map</a>
+                        <a class="navbar-item">About Us</a>
+                        <a class="navbar-item">Become a Partner</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+         <main class="section" >
+            <h2 class="title is-size-2 has-text-centered">Marques de Pompal</h2>
+            <article class="container">
+                <audio controls  src="../../../../Downloads/08 - Stakleni Noze.wav" style="width: 100%; ;"></audio>
+                <div class="columns">
+                    <div class="column is-7 has-text-centered" style="display:inline-block; width: 82%;">
+                        
+
+                        <p class="has-text-justified" style="vertical-align: top;" >
+                            “Decades ago, the square actually resembled a market, while with the begining of vehicular transportation it has been reimagined as a kind of massive intersection.The presence of two subway lines (Linha Azul and Linha Amarela) intersecting at stations beneath the surface and at least a dozen city and private bus routes attest to the importance of this transportation hub.  Within the reach of the square there are 
+                        </p>
+                        <div id="more" class="has-text-justified" style="vertical-align: top; display:none; ">
+                            <p>Sed eleifend lectus id semper accumsan. Sed lobortis id ligula eget blandit. Integer interdum iaculis nunc, sed porttitor magna tincidunt in. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aliquam lobortis accumsan tempor. Aliquam sollicitudin pulvinar est, quis convallis tellus.</p>
+                            <img..../>
+                        </div>
+                        <br>
+                        <button class="button" id="readMore" style="display: block; justify-content: left;">Read More</button>
+                        <button class="button" id="readLess" style="display: none; justify-content: right;">Read Less</button>
+                    </div>
+                    <div class="column is-auto" style="display:inline-block; width: 15%; justify-content: right; vertical-align: super; position: absolute;">
+                        <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/instagram-logo-3.png" alt="" style="width:70%;">
+                        <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/fb.png" alt="" style="width: 70%;">
+                        <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(5).png" alt="" style="width: 70%">
+                        <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(6).png" alt="" style="width: 70%">
+                    </div>
+                </div>
+            </article>
+        </main>
+        <hr style="margin: 0;">
+        <section class="section has-text-centered" style="padding: 0rem 0rem; margin: 0;">
+            <h3 class="is-size-4">Near you</h3>
+            <div class="container" style="padding-top: 15px;">
+                    <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(3).png" alt="error" style="width: 30%;">
+                    <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(2).png" alt="error" style="width: 30%;">
+                    <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(4).png" alt="error" style="width: 30%;">
+            </div>
+            
+        </section>
+
+
+        <footer class="footer" style="background-color: #7ed9573d; padding: 1rem 1.5rem 2rem;" >
+            <div class="columns">
+                <section class="column is-3  is-pulled-left"  >
+                    <figure class= "image is-128x128">
+                        <img src="https://raw.githubusercontent.com/andreexxm/testing-files/main/Talking%20(7).png" alt="" >
+                    </figure>
+                </section>
+                <section class=" column has-text-right" style="padding-top: 2rem;"  >
+                    <p class="bd-footer-link">
+                        <a href="#" style="color: #272727;">About Us</a>
+                    </p>
+                    <p class="bd-footer-link">
+                        <a href="#" style="color: #272727;">Partnerships</a>
+                    </p>
+                    <p class="bd-footer-link">
+                        <a href="#" style="color: #272727;">Contact</a>
+                    </p>
+                </section>
+            </div>
+            <br>
+            <div class="has-text-right" style="font-size: 0.8rem;">
+                <p>Copyright 2021 Talking Co. </p>
+            </div>
+        </footer>
+
+
+
+        <script>
+            const burgerIcon = document.querySelector("#burger");
+            const navbarMenu = document.querySelector("#navbar-links");
+
+            burgerIcon.addEventListener('click', () => {
+                navbarMenu.classList.toggle("is-active")
+            });
+
+            const readMore = document.querySelector("#readMore")
+
+            readMore.addEventListener('click', showMore = () => {
+                readMore.style.display = "none"
+                document.getElementById('more').style.display = "block";
+                document.getElementById('readLess').style.display = "block";
+            })
+
+            document.getElementById("readLess").addEventListener('click', showLess = () => {
+                readMore.style.display = "block"
+                document.getElementById('more').style.display = "none";
+                document.getElementById('readLess').style.display = "none";
+            })
+        </script>
+</body>
+</html>
